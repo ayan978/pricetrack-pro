@@ -1,0 +1,4 @@
+scrapy==2.11.1
+python-dotenv==1.0.1
+pydantic==2.8.2
+sqlite-utils==3.37
