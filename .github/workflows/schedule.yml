@@ -1,0 +1,38 @@
+name: daily-scrape
+
+on:
+  schedule:
+    # Runs every day at 23:00 UTC (which is 09:00 in Sydney during AEST, UTC+10)
+    - cron: "0 23 * * *"
+  workflow_dispatch: {}  # allow manual runs from the Actions tab
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Prepare env
+        run: |
+          cp .env.example .env
+          # If you want alerts in Actions, set secrets (see notes below)
+
+      - name: Run scraper
+        run: python -m scripts.run
+
+      - name: Upload database artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: pricetrack-db
+          path: data/pricetrack.db
