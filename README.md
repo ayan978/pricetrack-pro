@@ -37,7 +37,7 @@ pip install -r requirements.txt
 ### 3. Configure `.env`
 ALERT_WEBHOOK_URL=   # Optional: Slack/Discord webhook
 DB_URL=sqlite:///data/pricetrack.db
-USER_AGENT=PriceTrackProBot/1.0 (+contact: your_email@example.com)
+USER_AGENT=PriceTrackProBot/1.0
 
 ### 4. Run the scraper locally
 python -m scripts.run
