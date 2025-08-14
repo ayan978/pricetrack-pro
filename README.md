@@ -20,21 +20,6 @@ It also supports automatic daily runs using GitHub Actions.
 - [GitHub Actions](https://docs.github.com/en/actions) — Automation & scheduling
 - [dotenv](https://pypi.org/project/python-dotenv/) — Environment variable management
 
-## Project Structure
-pricetrack-pro/
-  .github/workflows/schedule.yml   # Daily GitHub Actions workflow
-  data/                            # Database storage
-  pricetrack_pro/                  # Scrapy project
-    spiders/
-      demo_store.py                 # Example spider
-    items.py
-    pipelines.py
-    settings.py
-  scripts/
-    run.py                          # Local execution entry point
-  requirements.txt
-  scrapy.cfg
-  README.md
 
 ## Quickstart
 
