@@ -24,7 +24,7 @@ It also supports automatic daily runs using GitHub Actions.
 ## Quickstart
 
 ### 1. Clone the repository
-git clone https://github.com/your-username/pricetrack-pro.git
+git clone https://github.com/ayan978/pricetrack-pro.git
 cd pricetrack-pro
 
 ### 2. Create a virtual environment & install dependencies
